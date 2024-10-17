@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+
+    <style>
+        @font-face {
+            font-family: 'Satoshi';
+            src: url('path-to-your-font/Satoshi-Medium.woff2') format('woff2'),
+                 url('path-to-your-font/Satoshi-Medium.woff') format('woff');
+            font-weight: 500;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Satoshi', sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background-color: #1e1e1e;
+        }
+
+        .logo img {
+            width: 50px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        ul li a.active,
+        ul li a:hover {
+            color: #6C63FF;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            gap: 40px;
+            padding: 0 80px;
+        }
+
+        .contact-image img {
+            width: 400px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .contact-content h1 {
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+        .mail-button a {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid #6C63FF;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+            background-color: transparent;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mail-button a:hover {
+            background-color: #6C63FF;
+            box-shadow: 0 0 15px rgba(108, 99, 255, 0.8);
+        }
+
+        /* Footer Styling */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .footer .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer .social-links a {
+            text-decoration: none;
+            color: #6C63FF;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .contact-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-image img {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="homepage.html"><img src="Group 3.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="aboutmepage.html">About Me</a></li>
+            <li><a href="portfoliopage.html">Portfolio</a></li>
+            <li><a href="contactmepage.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-image">
+            <img src="circle2.png" alt="Contact Image">
+        </div>
+        <div class="contact-content">
+            <h1>Reach Out and</h1>
+            <h1>Say Hello</h1>
+            <div class="mail-button">
+                <a href="mailto:your-email@example.com">Mail Me</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div>© All Rights Reserved</div>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://behance.net" target="_blank">Behance</a>
+            <a href="https://www.instagram.com/sh4zblub/profilecard/?igsh=Y3c3anQ4bmdwMzVi" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

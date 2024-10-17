@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--this is an onboarding page, after 5 seconds here the page will redirect to homepage of the website-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding Wavy Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1c1c1e;
+            font-family: 'Taylor No.2', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #a085ff;
+            border-radius: 19px;
+            width: 120px;
+            height: 60px;
+        }
+
+        .box.small {
+            width: 80px;
+        }
+
+        .text {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+    
+        @keyframes wave {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .box:nth-child(1) {
+            animation: wave 1.5s ease-in-out infinite;
+        }
+
+        .box:nth-child(2) {
+            animation: wave 1.5s ease-in-out infinite;
+            animation-delay: 0.2s;
+        }
+
+        .box:nth-child(3) {
+            animation: wave 1.5s ease-in-out infinite;
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <span class="text">LOADING</span>
+        </div>
+        <div class="box small">
+            <span class="text">PLS</span>
+        </div>
+        <div class="box small">
+            <span class="text">SABR</span>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "homepage.html";
+        }, 4700);
+    </script>
+</body>
+</html>

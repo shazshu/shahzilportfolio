@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+
+    <style>
+        @font-face {
+            font-family: 'Satoshi';
+            src: url('path-to-your-font/Satoshi-Medium.woff2') format('woff2'),
+                 url('path-to-your-font/Satoshi-Medium.woff') format('woff');
+            font-weight: 500;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Satoshi', sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background-color: #1e1e1e;
+        }
+
+        .logo img {
+            width: 50px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        ul li a.active,
+        ul li a:hover {
+            color: #6C63FF;
+        }
+
+        .image-section {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) sepia(20%) hue-rotate(200deg);
+        }
+
+        .image-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(108, 99, 255, 0.4);
+            z-index: 1;
+        }
+
+        .about-text {
+            max-width: 1200px;
+            margin: 40px auto 20px;
+            padding: 20px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .about-text p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .about-text a {
+            text-decoration: none;
+            color: #6C63FF;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .about-text a:hover {
+            color: white;
+        }
+
+        .resume-button {
+            display: flex;
+            justify-content: center;
+            margin: 5px 0 60px;
+        }
+
+        .resume-button a {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid #6C63FF;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            font-weight: 500;
+            background-color: transparent;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resume-button a:hover {
+            background-color: #6C63FF;
+            box-shadow: 0 0 15px rgba(108, 99, 255, 0.8);
+        }
+
+        .skills-experience {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 20px;
+        }
+
+        .skills-experience img {
+            width: 50%;
+            border-radius: 15px;
+        }
+
+        .skills-content {
+            width: 50%;
+        }
+
+        .skills-content h2 {
+            font-size: 20px;
+            color: #6C63FF;
+            margin-bottom: 10px;
+        }
+
+        .skills-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background-color: #1e1e1e;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .footer .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer .social-links a {
+            text-decoration: none;
+            color: #6C63FF;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .skills-experience {
+                flex-direction: column;
+            }
+
+            .skills-experience img,
+            .skills-content {
+                width: 100%;
+            }
+
+            .about-text {
+                padding: 40px 10px;
+            }
+
+            .social-links {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="homepage.html"><img src="Group 3.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="aboutmepage.html" class="active">About Me</a></li>
+            <li><a href="portfoliopage.html">Portfolio</a></li>
+            <li><a href="contactmepage.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="image-section">
+        <img src="circleputhis.png" alt="Descriptive Alt Text">
+    </section>
+
+    <section class="about-text">
+        <p>Hey, I’m Shahzil Akhtar, but most people call me Shaz because my name can be a bit tricky to pronounce. 
+        I’m currently a 3rd-year Bachelor of Design student at PES University, diving deep into the world of design and creativity. 
+        When I’m not working on projects, you’ll find me hiking up mountains, making 3D designs, fishing, 
+        or just hanging out with my cat. I love blending my passions for the outdoors and creativity to inspire my work.</p>
+        <p><a href="#">Let’s connect and create something amazing together!</a></p>
+    </section>
+
+    <div class="resume-button">
+        <a href="https://drive.google.com/file/d/1q--JWme28LSmaUTENhIKjlHHPxNPo8KN/view?usp=sharing" target="_blank">Resume</a>
+    </div>
+
+    <section class="skills-experience">
+        <img src="WhatsApp Image 2024-10-17 at 01.57.49_0bbfe0fb.jpg" alt="Design Image">
+        <div class="skills-content">
+            <h2>Skills</h2>
+            <p>Information architecture, Interaction design, User research, Usability testing, Wireframes, 
+               Task flows, competitive analysis, heuristic analysis, Visual design, prototyping, graphic design</p>
+
+            <h2>Collaboration</h2>
+            <p>Self-starter, Communicative, Detail-oriented, Team player</p>
+
+            <h2>Experience</h2>
+            <p>- 2 years as freelance designer</p>
+            <p>Created tailored design solutions for various clients, focusing on user-centered design.</p>
+            <p>Managed projects from concept to completion, ensuring timely delivery and satisfaction.</p>
+            <p>- 3 years of doing personal projects</p>
+            <p>Developed innovative design concepts, enhancing my skills in UI/UX and branding.</p>
+
+            <h2>Design Tools</h2>
+            <p>Adobe Suite, Figma, Miro, Blender, Framer</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="copyright">© All Rights Reserved</div>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://behance.net" target="_blank">Behance</a>
+            <a href="https://www.instagram.com/sh4zblub/profilecard/?igsh=Y3c3anQ4bmdwMzVi" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+
+    <style>
+        @font-face {
+            font-family: 'Satoshi';
+            src: url('path-to-your-font/Satoshi-Medium.woff2') format('woff2'),
+                 url('path-to-your-font/Satoshi-Medium.woff') format('woff');
+            font-weight: 500;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Satoshi', sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background-color: #1e1e1e;
+        }
+
+        .logo img {
+            width: 50px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        ul li a.active,
+        ul li a:hover {
+            color: #6C63FF;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 10px;
+            height: 80vh;
+            padding: 0 80px;
+            text-align: left;
+            gap: 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 35px;
+            font-weight: 400;
+            max-width: 1000px;
+            line-height: 1.2;
+        }
+
+        .resume-button {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .resume-button a {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid #6C63FF;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+            background-color: transparent;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resume-button a:hover {
+            background-color: #6C63FF;
+            box-shadow: 0 0 15px rgba(108, 99, 255, 0.8);
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .rounded-image {
+            width: 2000px;
+            height: auto;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .services-section {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 60px;
+            max-width: 2000px;
+            margin: 0 auto;
+        }
+
+        .services-intro {
+            flex: 1;
+        }
+
+        .services-intro h2 {
+            font-size: 25px;
+            font-weight: 600;
+            color: #6C63FF;
+            text-align: left;
+            margin-bottom: 6 px;
+        }
+
+        .services-intro h3 {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .services-intro p {
+            font-size: 22px;
+            line-height: 1.1;
+            margin-bottom: 1px;
+        }
+
+        .services-list {
+            flex: 1;
+        }
+
+        .service {
+            margin-bottom: 40px;
+        }
+
+        .service h4 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #6C63FF;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .footer .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer .social-links a {
+            text-decoration: none;
+            color: #6C63FF;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-section {
+                padding: 40px 10px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .services-section {
+                
+                flex-direction: column;
+            }
+
+            .services-intro, .services-list {
+                width: 100%;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="homepage.html"><img src="Group 3.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="homepage.html" class="active">Home</a></li>
+            <li><a href="aboutmepage.html">About Me</a></li>
+            <li><a href="portfoliopage.html">Portfolio</a></li>
+            <li><a href="contactmepage.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-section">
+        <h1>A Designer Focused On Creating Intuitive, User-Centered Experiences That Blend Creativity And Function To Solve Real-World Problems.</h1>
+        <div class="resume-button">
+            <a href="aboutmepage.html" target="_blank">About Me</a>
+        </div>
+    </section>
+
+    <section class="image-section">
+        <img src="car.png" alt="Man with Cat" class="rounded-image">
+    </section>
+
+    <section class="services-section">
+        <div class="services-intro" >
+            <h2>Services</h2>
+            <div><h3>Seamless Design, Development,</h3>
+                <h3>and Content Tailored for You</h3>
+            <p>Transform your online presence with my all-in-one</p>
+            <p>web design and content creation services.</p></div>
+        </div>
+        <div class="services-list" >
+            <div class="service">
+                <h4>01. Custom Web Design</h4>
+                <p>Tailored web design services that reflect your brand's uniqueness. Creating visually captivating and user-friendly sites to leave a lasting impression.</p>
+            </div>
+            <div class="service">
+                <h4>02. Service Design</h4>
+                <p>Developing holistic service experiences that improve customer satisfaction and business efficiency. Crafting seamless, user-centered journeys for impactful interactions.</p>
+            </div>
+            <div class="service">
+                <h4>03. Branding</h4>
+                <p>Comprehensive branding services to help your business stand out. Building cohesive brand identities that resonate and create lasting connections with your audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div>© All Rights Reserved</div>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://behance.net" target="_blank">Behance</a>
+            <a href="https://www.instagram.com/sh4zblub/profilecard/?igsh=Y3c3anQ4bmdwMzVi" target="_blank">Instagram</a>
+            
+        </div>
+    </footer>
+
+</body>
+</html>
